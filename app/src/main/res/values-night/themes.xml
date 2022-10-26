@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GithubUserFavorite" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/semiLight_grey</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Theme -->
+    <style name="BackgroundTheme">
+        <item name="android:src">@color/semiLight_grey</item>
+    </style>
+
+    <style name="switchTheme">
+        <item name="android:src">@drawable/ic_moon</item>
+    </style>
+
+    <style name="TextTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:text">@string/dark_mode</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- User Found-->
+    <style name="UserSearch">
+        <item name="android:src">@drawable/ic_person_search_darkmode</item>
+    </style>
+
+    <style name="UserNotFound">
+        <item name="android:src">@drawable/ic_not_found_darkmode</item>
+    </style>
+
+    <style name="UserNotFoundFavorite">
+        <item name="android:src">@drawable/ic_person_not_found_favorite_darkmode</item>
+    </style>
+
+    <!-- Recylerview -->
+    <style name="RecycleView">
+        <item name="cardBackgroundColor">@color/dark_grey</item>
+        <item name="cardCornerRadius">12dp</item>
+    </style>
+
+    <style name="IconContentUser">
+        <item name="android:src">@drawable/ic_people_white</item>
+    </style>
+
+    <style name="IconContentWork">
+        <item name="android:src">@drawable/ic_work_white</item>
+    </style>
+
+    <style name="IconContentLocation">
+        <item name="android:src">@drawable/ic_location_white</item>
+    </style>
+
+    <style name="TextContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextContent.TextView">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextContent.Name">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextContent.Username">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="civ_border_color">@color/white</item>
+        <item name="civ_border_width">2dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+</resources>

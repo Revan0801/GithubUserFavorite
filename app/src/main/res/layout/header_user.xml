@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    style="@style/BackgroundTheme">
+
+    <!-- PHOTO -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_photoUser"
+        style="@style/CircleImage"
+        android:layout_width="130dp"
+        android:layout_height="122dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <!-- NAME -->
+    <TextView
+        android:id="@+id/tv_itemName"
+        style="@style/TextContent.Name"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/img_photoUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_photoUser"
+        tools:text="@string/Name" />
+
+    <!-- USERNAME -->
+    <ImageView
+        android:id="@+id/icUsername"
+        style="@style/IconContentUser"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemName" />
+
+    <TextView
+        android:id="@+id/tv_itemUsername"
+        style="@style/TextContent.Username"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icUsername"
+        app:layout_constraintStart_toEndOf="@+id/icUsername"
+        app:layout_constraintTop_toTopOf="@+id/icUsername"
+        app:layout_constraintVertical_bias="0.48000002"
+        tools:text="@string/NameUser" />
+
+    <!-- FOLLOWERS -->
+    <TextView
+        android:id="@+id/tv_follower"
+        style="@style/TextContent.TextView"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@+id/img_photoUser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/value" />
+
+    <TextView
+        android:id="@+id/textFollowers"
+        style="@style/TextContent.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Followers"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_follower"
+        app:layout_constraintStart_toStartOf="@+id/tv_follower"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follower" />
+
+    <!-- FOLLOWING -->
+    <TextView
+        android:id="@+id/tv_following"
+        style="@style/TextContent.TextView"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_follower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/tv_follower"
+        app:layout_constraintTop_toTopOf="@+id/tv_follower"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/value" />
+
+    <TextView
+        android:id="@+id/textFollowing"
+        style="@style/TextContent.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Following"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_following"
+        app:layout_constraintStart_toStartOf="@+id/tv_following"
+        app:layout_constraintTop_toBottomOf="@+id/tv_following" />
+
+    <!-- COMPANY -->
+    <ImageView
+        android:id="@+id/icCompany"
+        style="@style/IconContentWork"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemUsername" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        style="@style/TextContent.TextView"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icCompany"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/icCompany"
+        app:layout_constraintTop_toTopOf="@+id/icCompany"
+        tools:text="@string/Company" />
+
+    <!-- LOCATION -->
+    <ImageView
+        android:id="@+id/icLocation"
+        style="@style/IconContentLocation"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        style="@style/TextContent.TextView"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icLocation"
+        app:layout_constraintStart_toEndOf="@+id/icLocation"
+        app:layout_constraintTop_toTopOf="@+id/icLocation"
+        tools:text="@string/Location" />
+
+    <!-- REPOSITORY -->
+    <TextView
+        android:id="@+id/tv_repository"
+        style="@style/TextContent.TextView"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textFollowing"
+        app:layout_constraintStart_toStartOf="@+id/textFollowers"
+        app:layout_constraintTop_toBottomOf="@+id/textFollowers"
+        tools:text="@string/value" />
+
+    <TextView
+        android:id="@+id/textRepository"
+        style="@style/TextContent.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Repository"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_repository"
+        app:layout_constraintStart_toStartOf="@+id/tv_repository"
+        app:layout_constraintTop_toBottomOf="@+id/tv_repository" />
+
+    <!-- SHARE PROFILE -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shareProfile"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_share"
+        app:iconGravity="end"
+        app:iconSize="15dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        tools:ignore="AllCaps"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

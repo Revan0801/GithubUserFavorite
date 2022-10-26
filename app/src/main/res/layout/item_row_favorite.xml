@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:layout_margin="8dp"
+    style="@style/RecycleView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photoUser"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/desc"
+            card_view:civ_border_color="@color/white"
+            card_view:civ_border_width="2dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_itemUsername"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            card_view:layout_constraintBottom_toBottomOf="@+id/photoUser"
+            card_view:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            card_view:layout_constraintHorizontal_bias="0.11"
+            card_view:layout_constraintStart_toEndOf="@+id/photoUser"
+            card_view:layout_constraintTop_toTopOf="@+id/photoUser"
+            card_view:layout_constraintVertical_bias="0.19"
+            tools:text="@string/NameUser" />
+
+        <TextView
+            android:id="@+id/tv_itemID"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/white"
+            card_view:layout_constraintBottom_toBottomOf="@+id/photoUser"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_itemUsername"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_itemUsername"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_itemUsername"
+            card_view:layout_constraintVertical_bias="0.0"
+            tools:text="ID" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="53dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/black"
+            android:padding="12dp"
+            card_view:icon="@drawable/ic_delete"
+            card_view:iconGravity="end"
+            card_view:iconSize="30dp"
+            card_view:iconTint="@color/white"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:strokeColor="@color/white"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

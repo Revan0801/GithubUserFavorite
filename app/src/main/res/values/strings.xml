@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">GitHubUserAPI</string>
+
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="input_username">Username</string>
+    <string name="desc">desc</string>
+    <string name="search_hint">Cari Username</string>
+    <string name="creator">Create By MuhammadRevansyahRifkyAl-basith</string>
+
+    <string name="value">value</string>
+    <string name="setting">Setting</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="not_found">User Tidak Dapat Ditemukan</string>
+    <string name="user_search">Mau Cari Akun Github Siapa Hari Ini ?</string>
+    <string name="daftar_favorite">DAFTAR FAVORITE</string>
+    <string name="share">SHARE</string>
+    <string name="favorite">Favorite</string>
+
+    <!-- Data Item User-->
+    <string name="NameUser">Username</string>
+    <string name="Name">Name</string>
+    <string name="Followers">Followers</string>
+    <string name="Following">Following</string>
+    <string name="Company">Company</string>
+    <string name="Location">Location</string>
+    <string name="Repository">Repository</string>
+
+    <!-- Option Menu-->
+    <string name="MenuRefresh">Refresh</string>
+    <string name="MenuSearch">Search</string>
+
+    <!-- Message -->
+    <string name="messageErrorSearch">Tidak Dapat Menemukan Username</string>
+    <string name="messageAdd">Berhasil ditambahkan ke Favorite!</string>
+    <string name="messageDelete">User telah dihapus dari Favorite</string>
+
+    <!-- Alert -->
+    <string name="alertDelete">Apakah anda yakin ingin menghapus user dari Favorite?</string>
+
+    <!-- Dialog Delete Favorite -->
+    <string name="title_delete">Hapus Favorite</string>
+    <string name="description_delete">Apakah anda yakin ingin menghapus user ini dari Favorite?</string>
+
+    <!-- Dialog -->
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="favorite_not_found">Favorite Tidak Ditemukan</string>
+
+</resources>
