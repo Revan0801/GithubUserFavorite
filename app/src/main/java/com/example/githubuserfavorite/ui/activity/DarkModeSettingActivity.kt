@@ -9,6 +9,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
+import com.example.githubuserfavorite.R
 import com.example.githubuserfavorite.databinding.ActivityDarkModeSettingBinding
 import com.example.githubuserfavorite.setting.DataStoreViewModel
 import com.example.githubuserfavorite.setting.DataStoreViewModelFactory
@@ -27,7 +28,7 @@ class DarkModeSettingActivity : AppCompatActivity() {
         binding = ActivityDarkModeSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Theme Settings"
+        supportActionBar?.title = getString(R.string.title_theme)
 
         val switchTheme = findViewById<SwitchMaterial>(binding.switchTheme.id)
 

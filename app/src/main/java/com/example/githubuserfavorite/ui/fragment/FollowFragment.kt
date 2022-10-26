@@ -14,14 +14,13 @@ import com.example.githubuserfavorite.ui.viewmodel.FollowViewModel
 
 class FollowFragment : Fragment() {
 
-    private var _binding: FragmentFollowBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var followBinding: FragmentFollowBinding
     private lateinit var username: String
     private val followViewModel by viewModels<FollowViewModel>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentFollowBinding.inflate(layoutInflater)
-        return binding.root
+        followBinding = FragmentFollowBinding.inflate(layoutInflater)
+        return followBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -59,7 +58,7 @@ class FollowFragment : Fragment() {
             listUser.addAll(listOf(follow))
         }
         val followersAdapter = FollowAdapter(listUser)
-        binding.apply {
+        followBinding.apply {
             rvFollowUser.layoutManager = LinearLayoutManager(context)
             rvFollowUser.adapter = followersAdapter
         }
@@ -67,9 +66,9 @@ class FollowFragment : Fragment() {
 
     private fun showLoading(isLoading: Boolean) {
         if (isLoading) {
-            binding.progressBarFollow.visibility = View.VISIBLE
+            followBinding.progressBarFollow.visibility = View.VISIBLE
         } else {
-            binding.progressBarFollow.visibility = View.GONE
+            followBinding.progressBarFollow.visibility = View.GONE
         }
     }
 

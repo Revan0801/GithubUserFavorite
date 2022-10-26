@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
-        supportActionBar?.title = "Github User's Search"
+        supportActionBar?.title = getString(R.string.title_main_search)
 
         activityMainBinding.rvGitUser.setHasFixedSize(true)
 

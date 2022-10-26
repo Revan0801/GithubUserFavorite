@@ -1,5 +1,6 @@
 package com.example.githubuserfavorite.api
 
+import com.example.githubuserfavorite.BuildConfig.BASE_URL
 import com.example.githubuserfavorite.api.ApiToken.GITHUB_TOKEN
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -21,7 +22,7 @@ object ApiConfig {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.github.com/")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

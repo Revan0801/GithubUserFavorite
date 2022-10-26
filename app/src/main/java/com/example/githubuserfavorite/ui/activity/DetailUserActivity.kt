@@ -37,7 +37,7 @@ class DetailUserActivity : AppCompatActivity() {
         detailUserBinding = ActivityDetailUserBinding.inflate(layoutInflater)
         setContentView(detailUserBinding.root)
 
-        supportActionBar?.title = "Detail User's"
+        supportActionBar?.title = getString(R.string.title_detail)
 
         detailViewModel.userGitDetail.observe(this) { detailUser ->
             setUserDetail(detailUser)

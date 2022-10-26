@@ -48,4 +48,10 @@
     <string name="no">Tidak</string>
     <string name="favorite_not_found">Favorite Tidak Ditemukan</string>
 
+    <!-- TITLE -->
+    <string name="title_theme">Theme Settings</string>
+    <string name="title_detail">Detail User\'s</string>
+    <string name="title_favorite">Favorite User</string>
+    <string name="title_main_search">Github User\'s Search</string>
+
 </resources>
