@@ -30,6 +30,7 @@ class DetailUserActivity : AppCompatActivity() {
     private lateinit var sectionPagerAdapter: SectionPagerAdapter
     private lateinit var favoriteViewModel: FavoriteViewModel
     private val detailViewModel by viewModels<DetailViewModel>()
+    private lateinit var linkGithub: String
     private var isFavorite = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -115,6 +116,9 @@ class DetailUserActivity : AppCompatActivity() {
             headerUser.tvLocation.text = detailUser.location
             headerUser.tvRepository.text = detailUser.publicRepos.toString()
 
+            linkGithub = detailUser.htmlUrl
+
+
             Glide.with(this@DetailUserActivity)
                 .load(detailUser.avatarUrl)
                 .placeholder(R.mipmap.ic_launcher_round)
@@ -177,10 +181,12 @@ class DetailUserActivity : AppCompatActivity() {
     private fun clickShare() {
         detailUserBinding.headerUser.shareProfile.setOnClickListener { v ->
             if (v == detailUserBinding.headerUser.shareProfile) {
-                val share = Intent(Intent.ACTION_SEND)
-                share.type = "text/plain"
                 val name = detailUserBinding.headerUser.tvItemName.text
-                share.putExtra(Intent.EXTRA_TEXT, name)
+                val share: Intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, "$name \nLink: $linkGithub")
+                    type = "text/plain"
+                }
                 startActivity(Intent.createChooser(share, "Share With"))
             }
         }

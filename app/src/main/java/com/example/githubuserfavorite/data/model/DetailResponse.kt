@@ -26,5 +26,8 @@ data class UserDetail(
     val location: String,
 
     @field:SerializedName("public_repos")
-    val publicRepos: Int
+    val publicRepos: Int,
+
+    @field:SerializedName("html_url")
+    val htmlUrl: String
 )
